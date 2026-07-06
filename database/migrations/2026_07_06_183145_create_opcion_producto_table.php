@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('opcion_producto', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('opcion_id')->constrained();
+            $table->foreignId('producto_id')->constrained();
+            $table->string('valor');
             $table->timestamps();
         });
     }

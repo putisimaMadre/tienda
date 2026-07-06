@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('variantes', function (Blueprint $table) {
             $table->id();
+            $table->string('sku');
+            $table->string('imagen_ruta');
+            $table->foreignId('producto_id')->constrained();
             $table->timestamps();
         });
     }
