@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-    //
+    protected $fillable = [
+        'sku',
+        'nombre',
+        'descripcion',
+        'imagen_ruta',
+        'precio',
+        'subcategoria_id'
+    ];    
+
     public function subcategoria(){
         return $this->belongsTo(Subcategoria::class);
     }

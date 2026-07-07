@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Opcion extends Model
 {
-    //
+    protected $fillable = [
+        'nombre',
+        'type'
+    ];
+
     public function caracteristicas(){
         return $this->hasMany(caracteristica::class);
     }

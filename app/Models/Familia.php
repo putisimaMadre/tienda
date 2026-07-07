@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Familia extends Model
 {
-    //Relacion 1:M
+    protected $fillable = [
+        'nombre'
+    ];
+
     public function categorias(){
         return $this->hasMany(Categoria::class);
     }

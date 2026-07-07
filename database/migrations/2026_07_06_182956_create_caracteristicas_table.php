@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('caracteristicas', function (Blueprint $table) {
             $table->id();
-            $table->string('value');
+            $table->string('valor');
             $table->string('descripcion');
             $table->foreignId('opcion_id')->constrained();
             $table->timestamps();

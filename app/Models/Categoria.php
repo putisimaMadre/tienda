@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    //Relacion 1:M inversa
+    protected $fillable = [
+        'nombre',
+        'familia_id'
+    ];
+
     public function familia(){
         return $this->belongsTo(Familia::class);
     }
